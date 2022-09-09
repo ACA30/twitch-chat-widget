@@ -127,7 +127,7 @@ export const get7TVGlobalEmotes = (): Promise<EmoteMap> =>
       res.body.reduce((acc, cur) => {
         acc[cur.name] = new ThirdPartyEmote(
           cur.id,
-          ThirdPartyEmoteProvider.BetterTTV,
+          ThirdPartyEmoteProvider.SevenTV,
           cur.name,
           ThirdPartyEmote.getSevenTVImageURL(cur.id),
         );
@@ -152,7 +152,7 @@ export const get7TVUserEmotes = (
       [...(res?.body ?? [])].reduce((acc, cur) => {
         acc[cur.name] = new ThirdPartyEmote(
           cur.id,
-          ThirdPartyEmoteProvider.BetterTTV,
+          ThirdPartyEmoteProvider.SevenTV,
           cur.name,
           ThirdPartyEmote.getSevenTVImageURL(cur.id),
         );
