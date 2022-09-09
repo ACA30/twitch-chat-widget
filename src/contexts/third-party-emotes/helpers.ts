@@ -27,6 +27,7 @@ export const parseFFZSet = (set: FrankerfacezSet) => {
       ThirdPartyEmoteProvider.FrankerFaceZ,
       emote.name,
       ThirdPartyEmote.getFrankerfacezImageURL(emote.id),
+      false,
     );
   }
 
@@ -83,6 +84,7 @@ export const getBTTVGlobalEmotes = (): Promise<EmoteMap> =>
           ThirdPartyEmoteProvider.BetterTTV,
           cur.code,
           ThirdPartyEmote.getBetterttvImageURL(cur.id),
+          false,
         );
         return acc;
       }, {} as EmoteMap),
@@ -111,6 +113,7 @@ export const getBTTVUserEmotes = (
           ThirdPartyEmoteProvider.BetterTTV,
           cur.code,
           ThirdPartyEmote.getBetterttvImageURL(cur.id),
+          false,
         );
         return acc;
       }, {} as EmoteMap),
@@ -130,6 +133,7 @@ export const get7TVGlobalEmotes = (): Promise<EmoteMap> =>
           ThirdPartyEmoteProvider.SevenTV,
           cur.name,
           ThirdPartyEmote.getSevenTVImageURL(cur.id),
+          cur.visibility_simple.includes("ZERO_WIDTH") ? true : false,
         );
         return acc;
       }, {} as EmoteMap),
@@ -155,6 +159,7 @@ export const get7TVUserEmotes = (
           ThirdPartyEmoteProvider.SevenTV,
           cur.name,
           ThirdPartyEmote.getSevenTVImageURL(cur.id),
+          cur.visibility_simple.includes("ZERO_WIDTH") ? true : false,
         );
         return acc;
       }, {} as EmoteMap),
