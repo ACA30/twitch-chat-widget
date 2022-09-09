@@ -1,3 +1,7 @@
+Fork of [aidenwallis/twitch-chat-widget](https://github.com/aidenwallis/twitch-chat-widget), which adds support for 7TV (incl zero-width emotes)
+
+---
+
 # twitch-chat-widget
 
 The Twitch chat widget I use on my personal streams on [Twitch](https://twitch.tv/Aiden).
