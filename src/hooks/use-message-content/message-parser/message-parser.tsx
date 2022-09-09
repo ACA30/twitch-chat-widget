@@ -13,7 +13,11 @@ export class MessageParser {
       const emote = emotes[word];
       if (emote) {
         return (
-          <ChatLineEmote name={emote.name} url={emote.imageUrl} />
+          <ChatLineEmote
+            name={emote.name}
+            url={emote.imageUrl}
+            zeroWidth={emote.zeroWidth}
+          />
         );
       }
       return word;
@@ -53,6 +57,7 @@ export class MessageParser {
           <ChatLineEmote
             name={name.join("")}
             url={`https://static-cdn.jtvnw.net/emoticons/v2/${emote.id}/default/dark/1.0`}
+            zeroWidth={false}
           />
         );
 

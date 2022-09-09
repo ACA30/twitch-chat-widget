@@ -47,6 +47,7 @@ export interface BetterttvUserBody {
 export interface SeventvEmote {
   id: string;
   name: string;
+  visibility_simple: string[];
 }
 
 export type SeventvGlobalBody = SeventvEmote[];
