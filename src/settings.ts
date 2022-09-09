@@ -1,5 +1,5 @@
-let twitchID = "87763385";
-let twitchLogin = "aiden";
+let twitchID = "115356177";
+let twitchLogin = "aca30doesgames";
 const [customTwitchID, customTwitchLogin] = window.location.pathname
   .split("?")[0]
   .substring(1)
